@@ -23,6 +23,10 @@ section {
   justify-content: center;
 }
 
+pre {
+  overflow: scroll;
+}
+
 code {
   background-color: black;
   color: white;
