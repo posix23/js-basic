@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>A Quick JS Overview</title>
+  <meta name="description" content="Quick JS tutorial based on school's assignment">
+  <meta name="author" content="Toan Ly">
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <header>
+    <h1>Javascript Basic</h1>
+  </header>
+
+  <br />
+
+  <section>
+    <h2>Hello World</h2>
+    <pre>
+      <code>
+        console.log("Hello World");
+      </code>
+    </pre>
+  </section>
+
+  <section>
+    <h2>Variables</h2>
+    <p>
+      <strong><em>Definition</em></strong>: Anything that can vary. JavaScript uses dynamic typing
+      for variable which means a variable could have an integer, string, boolean, or float value and
+      could be change anytime.
+    </p>
+    <p>There are 2 ways to declare a variable in JavaScript</p>
+    <ol>
+      <li>
+        <p>
+          <strong>let</strong>: This variable will have limited scope and only visible to the code
+          block that it is in. Developers tend to use this more.
+        </p>
+        <pre>
+          <code>
+            for (let i = 0; i < 2; i++) { 
+              console.log(i); // 0, 1
+            }
+
+            console.log(i); // Reference Error
+          </code>
+        </pre>
+      </li>
+      <li>
+        <p>
+          <strong>var</strong>: This variable can be called anywhere. Over used of this could lead
+          to variable name conflict which could be hard to track.
+        </p>
+        <pre>
+          <code>
+            for (var i = 0; i < 2; i++) { 
+              console.log(i); // 0, 1
+            }
+
+            console.log(i); // 1
+          </code>
+        </pre>
+      </li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>User Input</h2>
+    <p>
+      We can get user input either by HTML elements like text box or simply by using prompt(). This
+      is useful as it allows the program to interact with the user.
+    </p>
+    <pre>
+      <code>
+        let x = prompt("Type your name in"); // Input: John
+        alert("Hello " + x + "!"); // Output: "Hello John!"
+      </code>
+    </pre>
+  </section>
+
+  <section>
+    <h2>Basic Math in JavaScript</h2>
+    <p>
+      Javascript could be used to perform mathematical expression. There are 5 mathematical
+      operators in JavaScript:
+    </p>
+
+    <ol>
+      <li>
+        <p>"+" operator: This operator is used to get the sum of two numbers</p>
+        <pre>
+          <code>
+            let x = 1;
+            x = x + 1;
+            x; // 2
+          </code>
+        </pre>
+        <p>Here are the short hands for writing the above code block:</p>
+        <pre>
+          <code>
+            let x = 1;
+            x += 1;
+            x; // 2
+          </code>
+        </pre>
+        <pre>
+          <code>
+            let x = 1;
+            x++;
+            x; // 2
+          </code>
+        </pre>
+      </li>
+
+      <li>
+        <p>"-" operator: This operator is used to get the difference of two numbers</p>
+        <pre>
+          <code>
+            let x = 1;
+            x = x - 1;
+            x; // 0
+          </code>
+        </pre>
+        <p>Here are the short hands for writing the above code block:</p>
+        <pre>
+          <code>
+            let x = 1;
+            x -= 1;
+            x; // 0
+          </code>
+        </pre>
+        <pre>
+          <code>
+            let x = 1;
+            x--;
+            x; // 0
+          </code>
+        </pre>
+      </li>
+
+      <li>
+        <p>"*" operator: This operator is used to get the multiplication of two numbers</p>
+        <pre>
+          <code>
+            let x = 1;
+            x = x * 2;
+            x; // 2
+          </code>
+        </pre>
+        <p>Here is the short hand for writing the above code block:</p>
+        <pre>
+          <code>
+            let x = 1;
+            x *= 2;
+            x; // 2
+          </code>
+        </pre>
+      </li>
+
+      <li>
+        <p>
+          "/" operator: This operator is used to get the result of one number divided by the other
+        </p>
+        <pre>
+          <code>
+            let x = 4;
+            x = x / 2;
+            x; // 2
+          </code>
+        </pre>
+        <p>Here is the short hand for writing the above code block:</p>
+        <pre>
+          <code>
+            let x = 4;
+            x /= 2;
+            x; // 2
+          </code>
+        </pre>
+      </li>
+
+      <li>
+        <p>
+          "%" operator: This operator is used to get the remainder of the result of one number
+          divided by the other. This is useful to use when you want to know if the number is even or
+          odd.
+        </p>
+        <pre>
+          <code>
+            let x = 1;
+            x = x % 2;
+            x; // 1
+          </code>
+        </pre>
+        <p>Here is the short hand for writing the above code block:</p>
+        <pre>
+          <code>
+            let x = 1;
+            x %= 2;
+            x; // 1
+          </code>
+        </pre>
+      </li>
+    </ol>
+  </section>
+</body>
+
+</html>
